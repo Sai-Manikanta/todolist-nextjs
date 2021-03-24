@@ -13,15 +13,17 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <Head>
-        <title>TodoList</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <body className={`${darkModeStatus ? 'dark' : ''} h-screen`}>
+      <div className="bg-white dark:bg-gray-900 h-full">
+        <Head>
+          <title>TodoList</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <div className="h-64 bg-blue-800" style={darkModeStatus ? nightInlineStyle : dayInlineStyle}>
-
+        {/* Top header of light and dark images */}
+        <div className="h-64" style={darkModeStatus ? nightInlineStyle : dayInlineStyle}></div>
+        <button onClick={() => setDarkModeStatus(!darkModeStatus)}>Toggle theme</button>
       </div>
-    </div>
+    </body>
   )
 }
