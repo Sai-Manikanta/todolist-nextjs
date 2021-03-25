@@ -58,6 +58,7 @@ export default function Home() {
           <TodoList todos={todos} updateTodo={updateTodo} deleteTodo={deleteTodo} />
         </div>
       </div>
+      <a href="https://github.com/Sai-Manikanta/todolist-nextjs">Code: https://github.com/Sai-Manikanta/todolist-nextjs</a>
     </div>
   )
 }
