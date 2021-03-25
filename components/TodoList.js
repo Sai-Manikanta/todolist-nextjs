@@ -33,12 +33,12 @@ const TodoList = ({ todos, updateTodo, deleteTodo }) => {
                     {filteredTodos.map(todo => (
                         <div key={todo.id} className="flex items-center border-b-2 dark:border-gray-500 p-3 rounded-b">
                             {/* update button */}
-                            <svg onClick={() => updateTodo(todo.id)} className={`w-7 h-7 ${todo.completed ? 'bg-gradient-to-r from-pink-400 to-purple-600' : 'bg-white border-2'} rounded-full cursor-pointer text-white`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg onClick={() => updateTodo(todo.id)} className={`w-7 h-7 ${todo.completed ? 'bg-gradient-to-r from-pink-400 to-purple-600' : 'bg-white border-2'} rounded-full cursor-pointer text-white flex-shrink-0`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             {/* delete button */}
-                            <p className={`${todo.completed && 'line-through'} ml-3 pt-1 flex-grow`}>{ todo.todo }</p>
-                            <button onClick={() => deleteTodo(todo.id)} className="w-8 h-8 border-2 border-white shadow p-1 rounded-full bg-red-400 text-white focus:outline-none">
+                            <p className={`${todo.completed && 'line-through'} ml-3 pt-1 flex-grow truncate`}>{ todo.todo }</p>
+                            <button onClick={() => deleteTodo(todo.id)} className="w-8 h-8 border-2 border-white shadow p-1 rounded-full bg-red-400 text-white focus:outline-none flex-shrink-0">
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                               </svg>
